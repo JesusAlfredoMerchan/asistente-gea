@@ -13,19 +13,15 @@
 ### 👥 Guías de Uso
 
 - **[GUIAS_USO.md](./GUIAS_USO.md)** - Guías para usuarios finales y desarrolladores
-- **[GUIA_OBTENER_GEMINI_KEY.md](./GUIA_OBTENER_GEMINI_KEY.md)** - Cómo obtener y configurar la API key de Gemini
-- **[GUIA_OBTENER_OPENAI_KEY.md](./GUIA_OBTENER_OPENAI_KEY.md)** - Cómo obtener y configurar la API key de OpenAI
 
 ### 🗣️ Diseño Conversacional
 
 - **[DISEÑO_CONVERSACIONAL_README.md](./DISEÑO_CONVERSACIONAL_README.md)** - Índice de la documentación conversacional
 - **[CASOS_DE_USO.md](./CASOS_DE_USO.md)** - Casos de uso del asistente con personas y flujos
 - **[FLUJOS_CONVERSACIONALES.md](./FLUJOS_CONVERSACIONALES.md)** - Flujos conversacionales y patrones de diálogo
-- **[CONFIGURACION_INTENTS.md](./CONFIGURACION_INTENTS.md)** - Configuración de intents y respuestas
 
 ### 📋 Entrega del Proyecto (Curso)
 
-- **[GUIA_ENTREGA_PROYECTO_FINAL.md](./GUIA_ENTREGA_PROYECTO_FINAL.md)** - Guía general de entrega
 - **[ANALISIS_PROYECTO_FINAL.md](./ANALISIS_PROYECTO_FINAL.md)** - Análisis de cobertura de requisitos del curso
 - **[ENTREGA_PASO1.md](./ENTREGA_PASO1.md)** - Template para Paso 1: Casos de uso y diseño conversacional
 - **[ENTREGA_PASO2.md](./ENTREGA_PASO2.md)** - Template para Paso 2: Implementación y APIs

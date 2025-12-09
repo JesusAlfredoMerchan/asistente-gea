@@ -35,16 +35,6 @@ Esta documentación define la arquitectura conversacional del Asistente Intelige
 
 ---
 
-### 3. [CONFIGURACION_INTENTS.md](./CONFIGURACION_INTENTS.md)
-**Contenido**:
-- ✅ 10 intents configurados con JSON
-- ✅ Estructura de plantillas de respuesta
-- ✅ Base de datos de procedimientos
-- ✅ Ejemplos de procesamiento
-- ✅ Estructura de implementación sugerida
-
-**Útil para**: Implementación técnica y configuración del sistema
-
 ---
 
 ## 🗺️ Guía de Uso de la Documentación
@@ -59,18 +49,11 @@ Esta documentación define la arquitectura conversacional del Asistente Intelige
    - Ver plantillas de respuesta
    - Entender patrones conversacionales
 
-3. **Referencia**: [CONFIGURACION_INTENTS.md](./CONFIGURACION_INTENTS.md)
-   - Ver estructura técnica si necesitas detalles
-
 ---
 
 ### Para Desarrolladores
 
-1. **Empezar con**: [CONFIGURACION_INTENTS.md](./CONFIGURACION_INTENTS.md)
-   - Ver estructura de intents y plantillas
-   - Entender cómo se procesan las preguntas
-
-2. **Referencia**: [FLUJOS_CONVERSACIONALES.md](./FLUJOS_CONVERSACIONALES.md)
+1. **Empezar con**: [FLUJOS_CONVERSACIONALES.md](./FLUJOS_CONVERSACIONALES.md)
    - Ver manejo de errores
    - Entender flujos técnicos
 
