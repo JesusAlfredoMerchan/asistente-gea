@@ -44,8 +44,8 @@ const MessageBubble = ({ message }: MessageBubbleProps) => {
             ul: ({ children }) => <ul>{children}</ul>,
             ol: ({ children }) => <ol>{children}</ol>,
             li: ({ children }) => <li>{children}</li>,
-            code: ({ inline, children }) => 
-              inline ? <code className="inline-code">{children}</code> : <code className="code-block">{children}</code>,
+            code: ({ node, inline, children, ...props }: any) => 
+              inline ? <code className="inline-code" {...props}>{children}</code> : <code className="code-block" {...props}>{children}</code>,
             blockquote: ({ children }) => <blockquote>{children}</blockquote>,
             a: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>,
           }}

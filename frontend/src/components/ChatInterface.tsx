@@ -7,7 +7,7 @@ import ExportButton from './ExportButton'
 import ConversationHistory from './ConversationHistory'
 import { useToast } from '../hooks/useToast'
 import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts'
-import { sendMessage, getSuggestions, getModelStatus } from '../services/api'
+import { sendMessage, getSuggestions } from '../services/api'
 import type { Message, Suggestion } from '../types'
 import './ChatInterface.css'
 
@@ -19,7 +19,6 @@ const ChatInterface = () => {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [conversationId, setConversationId] = useState<string | null>(null)
-  const [searchResults, setSearchResults] = useState<Message[]>([])
   const [highlightedMessageId, setHighlightedMessageId] = useState<string | null>(null)
   const [showClearConfirm, setShowClearConfirm] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -101,6 +100,10 @@ const ChatInterface = () => {
     if (!skipConfirmation) {
       showToast('Conversación limpiada', 'success')
     }
+  }
+
+  const handleClearClick = () => {
+    clearConversation()
   }
 
   const handleNewConversation = () => {
@@ -265,14 +268,16 @@ const ChatInterface = () => {
           />
           <SearchBar
             messages={messages}
-            onSearchResults={setSearchResults}
+            onSearchResults={() => {
+              // Los resultados de búsqueda se manejan internamente en SearchBar
+            }}
             onHighlightMessage={setHighlightedMessageId}
             onOpenChange={setIsSearchOpen}
           />
           <ExportButton messages={messages} />
           <button 
             className={`clear-conversation-btn ${showClearConfirm ? 'confirm' : ''}`}
-            onClick={clearConversation}
+            onClick={handleClearClick}
             title={showClearConfirm ? "Confirmar limpieza (Ctrl/Cmd + L)" : "Limpiar conversación (Ctrl/Cmd + L)"}
           >
             {showClearConfirm ? '✓ Confirmar' : '🗑️'}

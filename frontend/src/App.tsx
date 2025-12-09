@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import ChatInterface from './components/ChatInterface'
 import ModelStatusComponent from './components/ModelStatus'
 import ThemeToggle from './components/ThemeToggle'
