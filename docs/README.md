@@ -22,7 +22,6 @@
 
 ### 📋 Entrega del Proyecto (Curso)
 
-- **[ANALISIS_PROYECTO_FINAL.md](./ANALISIS_PROYECTO_FINAL.md)** - Análisis de cobertura de requisitos del curso
 - **[ENTREGA_PASO1.md](./ENTREGA_PASO1.md)** - Template para Paso 1: Casos de uso y diseño conversacional
 - **[ENTREGA_PASO2.md](./ENTREGA_PASO2.md)** - Template para Paso 2: Implementación y APIs
 - **[ENTREGA_PASO3.md](./ENTREGA_PASO3.md)** - Template para Paso 3: Pruebas y validación
