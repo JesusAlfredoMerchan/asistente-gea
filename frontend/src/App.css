@@ -1,0 +1,224 @@
+.app {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+}
+
+.app-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  max-height: 800px;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 320px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] .app-container {
+  background: #1e1e2e;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+.header-content > .header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-right: 12px;
+  border-right: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  height: 65px;
+  padding: 4px;
+}
+
+.logo-container a:hover {
+  transform: scale(1.08);
+}
+
+.gea-logo {
+  max-height: 65px;
+  height: auto;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25)) brightness(1.15) contrast(1.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.logo-container a:hover .gea-logo {
+  opacity: 0.95;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35)) brightness(1.2) contrast(1.1);
+}
+
+.header-text {
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.header-model-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.2;
+}
+
+.app-header p {
+  font-size: 0.95rem;
+  opacity: 0.92;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .app-header {
+    padding: 14px 16px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .header-model-status {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .logo-container {
+    padding-right: 10px;
+    border-right-width: 1.5px;
+  }
+
+  .logo-container a {
+    height: 50px;
+    padding: 2px;
+  }
+
+  .gea-logo {
+    max-height: 50px;
+    max-width: 150px;
+  }
+
+  .app-header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+    gap: 6px;
+  }
+
+  .app-header p {
+    font-size: 0.85rem;
+  }
+
+  .header-text {
+    text-align: left;
+    padding-left: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 12px 14px;
+  }
+
+  .header-content {
+    gap: 12px;
+  }
+
+  .logo-container {
+    padding-right: 8px;
+  }
+
+  .gea-logo {
+    max-height: 45px;
+    max-width: 120px;
+  }
+
+  .app-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .app-header p {
+    font-size: 0.8rem;
+  }
+}
+
