@@ -30,6 +30,8 @@ const ModelStatusComponent = () => {
       setStatus(data)
     } catch (error) {
       console.error('Error cargando estado del modelo:', error)
+      // No bloquear la UI si falla, simplemente no mostrar el componente
+      setStatus(null)
     }
   }
 
@@ -53,6 +55,7 @@ const ModelStatusComponent = () => {
     }
   }
 
+  // Si no hay status, retornar null sin bloquear (no renderizar el componente)
   if (!status || !status.current_model) {
     return null
   }

@@ -2,12 +2,34 @@ import axios from 'axios'
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
+// Log para debugging (solo en desarrollo)
+if (import.meta.env.DEV) {
+  console.log('🔧 API Base URL:', API_BASE_URL)
+  console.log('🔧 VITE_API_URL env var:', import.meta.env.VITE_API_URL)
+}
+
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 10000, // 10 segundos de timeout para evitar que se quede colgado
 })
+
+// Interceptor para manejar errores globalmente
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.code === 'ERR_NETWORK' || error.message.includes('Network Error')) {
+      console.error('❌ Error de conexión con el backend:', {
+        url: API_BASE_URL,
+        error: error.message,
+        hint: 'Verifica que VITE_API_URL esté configurada en Vercel'
+      })
+    }
+    return Promise.reject(error)
+  }
+)
 
 export interface ChatResponse {
   response: string

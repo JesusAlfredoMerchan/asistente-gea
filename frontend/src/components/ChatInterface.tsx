@@ -186,6 +186,8 @@ const ChatInterface = () => {
       })))
     } catch (error) {
       console.error('Error cargando sugerencias:', error)
+      // No bloquear la UI si falla, simplemente no mostrar sugerencias
+      setSuggestions([])
     }
   }
 
