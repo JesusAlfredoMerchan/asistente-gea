@@ -379,7 +379,7 @@ Este es un proyecto privado desarrollado para IMPROTECSA S.A.S.
 
 ## 📄 Licencia
 
-© 2024 IMPROTECSA S.A.S. Todos los derechos reservados.
+© 2025 IMPROTECSA S.A.S. Todos los derechos reservados.
 
 ---
 
